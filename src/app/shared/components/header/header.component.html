@@ -1,7 +1,12 @@
 <div class="navbar">
   <!-- Company logo -->
+
   <div class="logo">
-    <img src="../assets/logo.png" alt="Logo" id="logo" />
+    <img
+      src="https://cdn.tgdd.vn/Files/2016/08/07/870935/pokeball.jpg"
+      alt="Logo"
+      id="logo"
+    />
   </div>
 
   <!-- Navigation links -->
@@ -13,13 +18,18 @@
   <!-- Language selection -->
 
   <div class="language">
-    <button size="s" tuiButton type="button">Đăng nhập</button>
-    <div class="languageTitle">
+    <button type="button" *ngIf="!userAuthenticated" (click)="goToLogin()">
+      Sign in
+    </button>
+    <button type="button" *ngIf="userAuthenticated" (click)="goToLogin()">
+      Logout
+    </button>
+    <!-- <div class="languageTitle">
       <i class="fas fa-globe"></i>
       <select>
         <option value="vi">VI</option>
         <option value="en">EN</option>
       </select>
-    </div>
+    </div> -->
   </div>
 </div>

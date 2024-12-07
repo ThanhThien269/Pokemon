@@ -1,0 +1,17 @@
+<div class="container">
+  <section>
+    <!-- <video id="slider" autoplay="autoplay" muted="muted" loop="loop">
+      <source
+        src="https://mnogoblog.ru/wp-content/uploads/2018/10/Suspension-Bridge-6408.mp4"
+        type="video/mp4"
+      />
+    </video> -->
+    <ul
+      *ngFor="let item of (pokemonList$ | async)?.pokemons ?? []; let i = index"
+    >
+      <li>
+        {{ item.name }}
+      </li>
+    </ul>
+  </section>
+</div>

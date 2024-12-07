@@ -1,0 +1,146 @@
+.footer {
+  height: 40%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--secondary-text-color);
+}
+
+.line {
+  border-bottom: #283248 solid 0.5px;
+  flex-direction: column;
+}
+.plus {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .social {
+    display: flex;
+    gap: 1rem;
+
+    i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+  }
+}
+/* column item */
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  padding: 0 2rem;
+  color: var(--primary-text-color);
+  h3 {
+    font-size: 24px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin: 1rem 0;
+    width: 12rem;
+    font-size: 1.2rem;
+  }
+
+  .iconText {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    line-height: 2rem;
+  }
+}
+.subCol {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.subLogo {
+  width: 4rem;
+  height: auto;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* signup form */
+.wrap {
+  display: flex;
+  justify-content: space-between;
+
+  .email {
+    height: 100%;
+  }
+  .signup-box {
+    margin-top: 1rem;
+    padding-bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #283248;
+  }
+
+  .signup-box .user-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .box {
+      display: flex;
+    }
+  }
+
+  .signup-box .user-box input {
+    width: 15rem;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border: none;
+
+    background: #fafafa;
+    outline: none;
+  }
+  .signup-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--primary-text-color);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    height: 2.5rem;
+    max-width: max-content;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    span {
+      width: 8rem;
+    }
+  }
+
+  .signup-box .user-box input:focus ~ label,
+  .signup-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 12px;
+  }
+}

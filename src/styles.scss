@@ -7,3 +7,11 @@
   --primary-text-color: #283248; /* Màu chữ */
   --secondary-text-color: #fafafa;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

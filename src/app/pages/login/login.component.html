@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <label for="username">username</label>
+      <input type="text" id="username" formControlName="username" required />
+
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
+      </div>
+      <div class="register-link">
+        <span
+          >Don't have an account? <a routerLink="/register">Register</a></span
+        >
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </div>
+</div>
