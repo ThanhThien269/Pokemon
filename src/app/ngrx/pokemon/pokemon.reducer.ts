@@ -19,13 +19,15 @@ export const pokemonReducer = createReducer(
     errorGetAllMessage: '',
   })),
 
-  on(PokemonActions.getListSuccess, (state, { type, pokemons }) => ({
-    ...state,
-
-    isGettingAll: false,
-    isGetsuccess: true,
-    pokemons: pokemons,
-  })),
+  on(PokemonActions.getListSuccess, (state, { pokemons }) => {
+    console.log('Pokemons Reducer:', pokemons);
+    return {
+      ...state,
+      isGettingAll: false,
+      isGetsuccess: true,
+      pokemons: pokemons,
+    };
+  }),
 
   on(PokemonActions.getListFailure, (state, { error }) => ({
     ...state,

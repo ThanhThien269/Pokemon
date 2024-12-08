@@ -7,8 +7,8 @@ export interface PokemonModel {
   hp: number;
   attack: number;
   defense: number;
-  spAtk: number;
-  spDef: number;
+  spAttack: number;
+  spDefense: number;
   speed: number;
   generation: number;
   legendary: boolean;
@@ -17,6 +17,10 @@ export interface PokemonModel {
 }
 
 export interface PokemonResponse {
-  pokemons: PokemonModel[];
-  endPage: number;
+  data: {
+    pokemons: PokemonModel[];
+    endPage: number;
+  };
+  message: string;
+  statusCode: number;
 }
